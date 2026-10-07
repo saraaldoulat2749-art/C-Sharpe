@@ -20,7 +20,7 @@ namespace Shool_System_2
             double Grade = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Student Average : ");
-            string Average = Console.ReadLine();
+            double Average = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Student Gender : ");
             string Gender = Console.ReadLine();
@@ -54,20 +54,19 @@ namespace Shool_System_2
             Console.WriteLine("========================================");
 
 
-            double average = 85.5;
             int bonus = 5;
 
-            double newAverage = average + bonus;
+            double newAverage = Average + bonus;
 
-            Console.WriteLine($"Original Average: {average}");
+            Console.WriteLine($"Original Average: {Average}");
             Console.WriteLine($"Bonus Marks: {bonus}");
             Console.WriteLine($"New Average: {newAverage}");
 
             Console.WriteLine("========================================");
 
-            bool passed = true;
+            bool passed = newAverage>=50;
 
-            bool adult = true;
+            bool adult = Age>=18;
 
             Console.WriteLine($"Passed: {passed}");
 
