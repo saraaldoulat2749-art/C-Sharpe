@@ -10,24 +10,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-             
+            string correctPassword = "1234";
 
-           /* string name = Console.ReadLine();
-            Console.WriteLine(name);*/
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.Write("Enter password: ");
+                string password = Console.ReadLine();
+                
 
-            //======================================//
+                if (string.IsNullOrWhiteSpace(password)) //" " "" // always is return false or true
+                {
+                    Console.WriteLine("Password cannot be empty!");
+                    continue;
+                }
 
-            Console.Write("Enter your name: ");
+                if (password == correctPassword)
+                {
+                    Console.WriteLine("Login successful!");
+                    break;
+                }
 
-            string name = Console.ReadLine();
+                Console.WriteLine("Wrong password!");
+            }
 
-            Console.WriteLine();
-
-            Console.WriteLine("Hello " + name);
-
-            //=====================================//
-
-           
+            Console.WriteLine("Program finished.");
         }
     }
 }
