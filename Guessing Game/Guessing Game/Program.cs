@@ -1,25 +1,28 @@
-﻿using System;
+﻿
 using System;
 
 namespace task3
 {
-    internal class Program
+
+    class Program
     {
         static void Main(string[] args)
         {
-
-            // Part 1 - Guessing Game
             Console.WriteLine("===== Guessing Game =====");
+
             Random random = new Random();
             int secretNumber = random.Next(50, 76);
             int guess = 0;
             int attempts = 0;
             int points = 0;
+
             while (guess != secretNumber)
             {
                 Console.Write("Guess a number between 50 and 75: ");
                 guess = int.Parse(Console.ReadLine());
+
                 attempts++;
+
                 if (guess < secretNumber)
                 {
                     Console.WriteLine("Try a higher number.");
@@ -32,6 +35,7 @@ namespace task3
                 {
                     Console.WriteLine("Congratulations!");
                 }
+
             }
             // Calculate points
 
